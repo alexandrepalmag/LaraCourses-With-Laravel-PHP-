@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ContactController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::get('/contact/{id?}', ['ContactController@index']);
+
+//Route::get('/contact/{id?}', 'App\Http\Controllers\ContactController@index');
+
+Route::get('/contact/{id?}', [ContactController::class, 'index']);
+
+Route::post('/contact', [ContactController::class, 'criar']);
+
+Route::put('/contact', [ContactController::class,'editar']);
