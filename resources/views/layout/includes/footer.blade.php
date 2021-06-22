@@ -1,3 +1,17 @@
-</body>
+       <!-- Compiled and minified JavaScript -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+       <script src="../../js"></script>t
+       <script type="text/javascript">
+           document.addEventListener('DOMContentLoaded', function() {
+               var elems = document.querySelectorAll('.autocomplete');
+               var instances = M.Autocomplete.init(elems, options);
+           });
 
-</html>
+           document.addEventListener('DOMContentLoaded', function() {
+               var elems = document.querySelectorAll('.sidenav');
+               var instances = M.Sidenav.init(elems, options);
+           });
+       </script>
+       </body>
+
+       </html>
