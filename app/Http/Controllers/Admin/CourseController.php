@@ -22,4 +22,19 @@ class CourseController extends Controller
     {
         return "Add function";
     }
+
+    public function edit()
+    {
+        return "Add function";
+    }
+
+    public function update()
+    {
+        return "Add function";
+    }
+
+    public function delete()
+    {
+        return "Add function";
+    }
 }
