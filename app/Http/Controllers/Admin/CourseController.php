@@ -5,12 +5,16 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\Course;
+
 class CourseController extends Controller
 {
     //
     public function index()
     {
-        return "Courses Admin route";
+
+        $registers = Course::all();
+        return view('admin.courses.index', compact('registers'));
     }
 
     public function add()

@@ -31,9 +31,9 @@ Route::post('/contact', [ContactController::class, 'criar']);
 
 Route::put('/contact', [ContactController::class, 'editar']);
 
-Route::get('admin/courses', ['as' => 'admin.courses', CourseController::class, 'index']);
-Route::get('admin/courses/add', ['as' => 'admin.courses.add', CourseController::class, 'add']);
-Route::post('admin/courses/save', ['as' => 'admin.courses.save', CourseController::class, 'save']);
-Route::get('admin/courses/edit/{id}', ['as' => 'admin.courses.edit', CourseController::class, 'edit']);
-Route::put('admin/courses/update/{id}', ['as' => 'admin.courses.update', CourseController::class, 'update']);
-Route::get('admin/courses/delete/{id}', ['as' => 'admin.courses.delete', CourseController::class, 'delete']);
+Route::get('/admin/courses', [CourseController::class, 'index'])->name('admin.courses');
+Route::get('/admin/courses/add', [CourseController::class, 'add'])->name('admin.courses.add');
+Route::post('/admin/courses/save', [CourseController::class, 'save'])->name('admin.courses.save');
+Route::get('/admin/courses/edit/{id}', [CourseController::class, 'edit'])->name('admin.courses.edit');
+Route::put('/admin/courses/update/{id}', [CourseController::class, 'update'])->name('admin.courses.update');
+Route::get('/admin/courses/delete/{id}', [CourseController::class, 'delete'])->name('admin.courses.delete');
