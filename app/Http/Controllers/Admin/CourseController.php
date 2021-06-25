@@ -19,7 +19,7 @@ class CourseController extends Controller
 
     public function add()
     {
-        return "Add function";
+        return view('admin.courses.add');
     }
 
     public function save()
