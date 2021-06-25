@@ -8,13 +8,13 @@
 
         <div class="row">
 
-            <form class="" action="{{ route('admin.courses.add') }}" method="POST" enctype="multipart/form-data">
+            <form class="" action="{{ route('admin.courses.save') }}" method="POST" enctype="multipart/form-data">
 
                 {{ csrf_field() }}
 
                 @include('admin.courses._form')
 
-                <a href="#" class="btn cyan darken-3">Save</a>
+                <button class="btn cyan darken-3">Save</button>
 
             </form>
 

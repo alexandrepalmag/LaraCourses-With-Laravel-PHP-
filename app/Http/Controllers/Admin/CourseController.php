@@ -22,9 +22,10 @@ class CourseController extends Controller
         return view('admin.courses.add');
     }
 
-    public function save()
+    public function save(Request $req)
     {
-        return "Add function";
+        $datas = $req->all();
+        dd($datas);
     }
 
     public function edit()
