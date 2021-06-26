@@ -14,7 +14,7 @@
 </div>
 
 <div class="file-field input-field">
-    <div class=" btn teal darken-1">
+    <div class=" btn blue-grey">
         <span>Image</span>
         <input type="file" name="image">
     </div>
@@ -31,7 +31,7 @@
     <p>
         <label>
             <input type="checkbox" id="test5" name="published"
-                {{ isset($register->published) == 'yes' ? 'checked' : '' }} value="true" />
+                {{ isset($register->published) == 'Yes' ? 'checked' : '' }} value="true" />
             <span>Publish?</span>
         </label>
     </p>

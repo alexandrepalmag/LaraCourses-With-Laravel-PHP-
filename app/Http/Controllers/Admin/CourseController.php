@@ -25,12 +25,37 @@ class CourseController extends Controller
     public function save(Request $req)
     {
         $datas = $req->all();
-        dd($datas);
+
+        if (isset($datas['published'])) {
+
+            $datas['published'] = 'Yes';
+        } else {
+
+            $datas['published'] = 'No';
+        }
+
+        if ($req->hasFile('image')) {
+
+            $image = $req->file('image');
+            $randomnumber = rand(1111, 9999);
+            $dir = "img/courses/";
+            $extension = $image->guessClientExtension();
+            $imagename = "image_" . $randomnumber . "." . $extension;
+            $image->move($dir, $imagename);
+            $datas['image'] = $dir . "/" . $imagename;
+        }
+
+        Course::create($datas);
+
+        return redirect()->route('admin.courses');
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return "Add function";
+
+        $register = Course::find($id);
+
+        return view('admin.courses.edit',compact('register'));
     }
 
     public function update()

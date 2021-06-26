@@ -14,7 +14,11 @@
 
                 @include('admin.courses._form')
 
-                <button class="btn cyan darken-3">Save</button>
+                <a href="{{ route('admin.courses') }}" class="btn red darken-4 waves-effect waves-light"><i
+                        class="material-icons left">cancel</i>Cancel</a>
+
+                <button class="btn cyan darken-3 waves-effect waves-light"><i
+                        class="material-icons left">cloud</i>Save</button>
 
             </form>
 
