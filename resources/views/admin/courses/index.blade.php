@@ -24,7 +24,7 @@
                             <td>{{ $register->id }}</td>
                             <td>{{ $register->title }}</td>
                             <td>{{ $register->description }}</td>
-                            <td><img width="120" src="{{ asset($register->image) }}" alt="{{ $register->image }}"></td>
+                            <td><img height="50" src="{{ asset($register->image) }}" alt="{{ $register->image }}"></td>
                             <td>{{ $register->published }}</td>
                             <td>
                                 <a class="btn cyan darken-4"

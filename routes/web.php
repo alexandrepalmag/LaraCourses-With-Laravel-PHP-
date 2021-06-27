@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 
 use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Site\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,7 @@ use App\Http\Controllers\Admin\CourseController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('site.home');
 
 //Route::get('/contact/{id?}', ['ContactController@index']);
 

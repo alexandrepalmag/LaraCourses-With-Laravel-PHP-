@@ -14,7 +14,7 @@
 
                 @include('admin.courses._form')
 
-                <a href="{{ route('admin.courses') }}" class="btn red darken-4 waves-effect waves-light"><i
+                <a href="{{ route('admin.courses') }}" class="btn amber darken-3 waves-effect waves-light"><i
                         class="material-icons left">cancel</i>Cancel</a>
 
                 <button class="btn cyan darken-3 waves-effect waves-light"><i

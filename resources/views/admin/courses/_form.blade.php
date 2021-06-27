@@ -31,7 +31,7 @@
     <p>
         <label>
             <input type="checkbox" id="test5" name="published"
-                {{ isset($register->published) && $register->published == 'Yes' ? 'checked' : '' }} {{-- value="true" --}} />
+                {{ isset($register->published) && $register->published == 'Yes' ? 'checked' : '' }} value="true" />
             <span>Publish?</span>
         </label>
     </p>
