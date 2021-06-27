@@ -28,6 +28,31 @@
             </div>
 
         </div>
+        <div class="row center-align">
+            <ul class="pagination ">
+                {{-- Previous Page Link --}}
+                @if ($courses->onFirstPage()) 
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                @else
+                <li class="waves-effect"><a href="{{ $courses->previousPageUrl() }}"><i class="material-icons">chevron_left</i></a></li>
+                @endif
+            
+                {{-- Page Number Links --}}
+                @for($i=1; $i<=$courses->lastPage(); $i++)
+                    @if($i==$courses->currentPage())
+                        <li class="active cyan darken-4"><a href="?page={{$i}}">{{$i}}</a></li>
+                    @else
+                        <li class="waves-effect"><a href="?page={{$i}}">{{$i}}</a></li>
+                    @endif
+                @endfor
+            
+                {{-- Next Page Link --}}
+                @if ($courses->hasMorePages())
+                <li class="waves-effect"><a href="{{ $courses->nextPageUrl() }}"><i class="material-icons">chevron_right</i></a></li>
+                @else
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                @endif
+            </ul>
+        </div>
     </div>
-
 @endsection
